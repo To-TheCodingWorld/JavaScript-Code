@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Functions</title>
+</head>
+<body>
+  <script>
+    let sum = (num1,num2) => {
+      return num1 + num2;
+    }; // This is an arrow function, it can be called directly.
+    console.log(sum(5, 10)); // Outputs: 15
+
+
+    let square = (num) => num * num; // Single expression, implicit return
+    console.log(square(5)); // Outputs: 25
+
+    const greet = () => console.log("Hello, World!"); // No parameters
+    greet(); // Outputs: Hello, World!
+  </script>
+</body>
+</html>

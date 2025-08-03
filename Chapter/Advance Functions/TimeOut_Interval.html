@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Timeout & setInterval</title>
+</head>
+<body>
+  <script>
+    let alarm= function() {
+      console.log(`Alarm ringing! ,${new Date()}`);
+    };
+    setTimeout(alarm, 3000); // Calls the alarm function after 3 seconds
+    console.log("Alarm is set for 3 seconds later.");
+
+   let timerID= setInterval(alarm, 5000); // Calls the alarm function every 5 seconds
+    console.log("Alarm will ring every 5 seconds.");
+    clearInterval(timerID); // Stops the interval after it has been set
+    setInterval(() => clearInterval(timerID), 5000); // Clears the interval after 5 seconds
+      
+    
+  </script>
+</body>
+</html>

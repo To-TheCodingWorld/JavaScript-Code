@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object </title>
+</head>
+<body>
+  <script>
+    let product = {
+      name: "Laptop",
+      price: 1000,
+      brand: "Dell",
+      displayInfo: function() {
+        console.log(`Product Name: ${this.name}, Price: ${this.price}, Brand: ${this.brand}`);
+      }     
+    };
+    product.displayInfo(); 
+    // console.log(product.name);
+    // console.log(product.price);
+    // console.log(product.brand);  
+    delete product.price; 
+    console.log("After deleting price:");
+    console.log(product);                
+    product.displayInfo(); 
+  </script>
+</body>
+</html>

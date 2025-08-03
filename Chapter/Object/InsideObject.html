@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object inside Object</title>
+</head>
+<body>
+  <script>
+    let student1 = {
+      Name : "Mahabir Mahato",
+      Roll_no : 2408010,
+      Age : 23,
+      Contact : {
+        Email : "rabi@gmail.com",
+        Phone : '7894561230'  
+      },
+      Grades : {
+        Math : 95,
+        Science : 90,
+        English : 85
+      } 
+    };
+    console.log("Student Name:", student1.Name);
+    console.log(`Roll No: ${ this.Roll_no}`);
+    console.log("Age:", student1.Age);
+    console.log("Contact Email:", student1.Contact.Email);  
+    console.log("Contact Phone:", student1.Contact.Phone);
+    console.log("Math Grade:", student1.Grades.Math);
+
+    student1.Grades.Science = "92";
+    console.log("Updated Science Grade:", student1.Grades.Science);
+    delete student1.Grades.English; // Deleting a property from the nested object
+    console.log("Updated Student Object:", student1);
+
+
+
+    const student = {
+  name: "Priya",
+  age: 21,
+  contact: {
+    email: "priya@example.com",
+    phone: "9876543210"
+  },
+  grades: {
+    math: 92,
+    english: 88
+  }
+};
+    console.log("Student Name:", student.name);
+    console.log("Student Age:", student.age);
+    console.log("Contact Email:", student.contact.email);
+    console.log("Contact Phone:", student.contact.phone);
+    console.log("Math Grade:", student.grades.math);
+    console.log("English Grade:", student.grades.english);
+
+    // Accessing nested object properties
+    console.log(`Student ${student.name} has a Math grade of ${student.grades.math} and can be contacted at ${student.contact.email}.`);
+
+    // Adding a new property to the nested object
+    student.contact.address = "123 Main St, City, Country";
+    delete student.grades.english; // Deleting a property from the nested object
+    console.log("Updated Student Object:", student);
+
+  </script>
+</body>
+</html>

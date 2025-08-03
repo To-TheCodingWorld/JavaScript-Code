@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listener</title>
+</head>
+<body>
+  <button id="btn">click me</button>
+  <script>
+    let button = document.querySelector("#btn");
+    let behaviour = function() {
+      console.log("Button was clicked!");
+    };
+    button.addEventListener("click", behaviour); // Adds an event listener to the button
+    // button.removeEventListener("click", behaviour); // Removes the event listener from the button
+  </script>
+</body>
+</html>

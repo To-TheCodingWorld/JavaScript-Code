@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anonymous Functions </title>
+</head>
+<body>
+  <script>
+   let sum = function (num1, num2) {
+      return num1 + num2;
+    } // This is an anonymous function, it cannot be called directly.
+    console.log(sum(5, 10)); // Outputs: 15
+
+    let sumThreeNumbers = function (num1, num2, num3,sumOfTwo){
+      let sum1 = sumOfTwo(num1, num2);
+      return sumOfTwo(sum1, num3);
+    }
+
+    console.log(sumThreeNumbers(5, 10, 15, sum)); // Outputs: 30
+  </script>
+</body>
+</html>

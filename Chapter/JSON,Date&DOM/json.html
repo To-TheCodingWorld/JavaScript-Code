@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON</title>
+</head>
+<body>
+  <script>
+    let product = {
+      Name : 'T-Shirt',
+      Price : 499,
+      Rating : {
+        Stars : 4.5,
+        Reviews : 1200
+      },
+    };
+    console.log(typeof product); // object
+    console.log(product);
+
+    let str = JSON.stringify(product); // Convert object to JSON string
+    console.log(typeof str); // string
+    console.log(str);
+
+    let newProduct = JSON.parse(str); // Convert JSON string back to object
+    console.log(typeof newProduct); // object
+    console.log(newProduct);
+
+
+const user = {
+  name: "Riya",
+  age: 25,
+  isMember: true
+};
+
+const jsonStr = JSON.stringify(user);
+console.log(jsonStr);
+// Output: '{"name":"Riya","age":25,"isMember":true}'
+
+
+const Str = '{"name":"Riya","age":25,"isMember":true}';
+const userObj = JSON.parse(Str);
+
+console.log(userObj); 
+  </script>
+</body>
+</html>
