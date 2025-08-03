@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metro Ticket</title>
+</head>
+<body>
+  <script>
+    let age= 96;
+    let gender='male';
+    let finalDiscount;
+
+    if(age<=5){
+      finalDiscount = 100; // Free for children under 5
+    }else if(gender === 'female'){
+      finalDiscount = 50;
+    }else if(age <=8){
+      finalDiscount=50; // 50% discount for children aged 6-8
+    }else if(age >=65){
+      finalDiscount = 30; // 30% discount for senior citizens
+    }else{
+      finalDiscount = 0; // No discount for others
+    }  
+
+    console.log(`Final Discount : ${finalDiscount}`);
+    
+    </script>
+</body>
+</html>

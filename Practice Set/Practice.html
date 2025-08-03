@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Begining and Ending</title>
+</head>
+<body>
+  <Script>
+    // let numbers = [5,6];
+    // numbers.unshift(4); // Adds 4 at the beginning
+    // numbers.push(7); // Adds 7 at the end
+    // console.log(numbers); 
+
+    // let Name = ["Mahabir", "Gokul", "Sanjay"];
+    // console.log(Name[2]);
+    // Name.slice(1, 2); // Extracts elements from index 1 to 2 (not including 2)
+    // console.log(Name.slice(1, 2)); // Outputs: ["Gokul"]
+
+    // function arrCopy(arr) {
+    //   return arr.slice(0 ,3); 
+    // }
+
+    // let arr = [1, 2, 3, 4, 5];
+    // console.log(arrCopy(arr)); // Outputs: [2, 3]
+
+    function isPrime(num){
+      if(num <= 1) return false; // 0 and 1 are not prime numbers
+      for(let i = 2; i <= Math.sqrt(num); i++) {
+        if(num % i === 0) return false; // If divisible by any number other than 1 and itself
+      }
+      return true; // If no divisors found, it's a prime number
+    }
+ 
+    // let num=2;
+    // let i=0;
+    // while(i<5){
+    //   if(isPrime(num)){
+    //     console.log(`${num} is a prime number`);
+    //     i++;
+    //   }
+    //   num++;
+    // }
+
+    
+    // let num=2;
+    // let i=0;
+    // while(true){
+    //   if(isPrime(num)){
+    //     console.log(`${num} is a prime number`);
+    //     i++;
+    //     if(i > 5) {
+    //       break;
+    //      } // Stop after finding 5 prime numbers 
+    //   }
+    //   num++;
+    // }
+
+
+    // for( let i=10;i>0;i--){
+    //   console.log(i);
+    // }
+
+    // for(let i=0;i<=10;i++){
+    //   console.log(10-i);
+    // }
+
+    // let arr=[1,-6,5,7,-98];
+    // for(let i=0;i<arr.length;i++){
+    //  if(arr[i] < 0){
+    //     continue;
+    //  }
+    //  console.log(arr[i]);
+    // }
+
+    let arr = ['KG','Coding','JavaScript','Course','is' , 'Awesome'];
+    let newArr = [];
+    for(let i=0;i<arr.length;i++){
+      newArr += arr[i] + ' '; // Concatenates each element with a space
+    }
+    console.log(newArr); // Outputs: KGCodingJavaScriptCourseisAwesome
+     </Script>
+</body>
+</html>

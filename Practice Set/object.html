@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
+</head>
+<body>
+  <script>
+    let product = {
+      Name : 'Jeans',
+      Size : 'S',
+      Fit : 'Slim Fit',
+      'Delivery_Time' : '3-5 days',
+    };
+
+    console.log(product['Delivery_Time']); // Accessing property with special character
+    let CopyProduct = product; // Copying the reference of the object
+    console.log(product);
+    CopyProduct.Size = 'M'; 
+    console.log(product); // Changes in CopyProduct will reflect in product
+    CopyProduct.Fit = 'Regular Fit';
+    console.log(product); // Changes in CopyProduct will reflect in product
+
+
+    let obj = {
+      messege : 'Good Job',
+      Status : 'Completed',
+    };
+    console.log(obj);
+    let { messege, Status } = obj; // Destructuring the object
+    console.log(messege);
+    console.log(Status);
+
+    function isIdenticalProduct (product1 , product2){
+      if(typeof product1 !== 'object' || typeof product2 !== 'object'){
+        console.warn('Parameters passwsd are not objects');
+        return false;
+      }
+      if(product1 === product2){
+        return true; // Same reference
+      }
+      if(product1.Name === product2.Name && 
+         product1.Size === product2.Size && 
+         product1.Fit === product2.Fit){
+         return true; // Same properties and values
+         }
+         else {
+           return false; // Different properties or values
+         }
+    }
+     let product2 = {
+      Name : 'Jeans',
+      Size : 'M',
+      Fit : 'Slim Fit',
+      'Delivery_Time' : '3-5 days',
+    };
+
+    console.log(isIdenticalProduct(product, product2)); // false
+    console.log(isIdenticalProduct(product, product)); // true
+    console.log(isIdenticalProduct(product, CopyProduct)); // true
+     
+  </script>
+</body>
+</html>
