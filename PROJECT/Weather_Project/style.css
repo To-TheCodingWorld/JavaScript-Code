@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.heading_1{
+  text-align: center;
+  font-size: 2.5rem;
+  color: #0b0303;
+  margin-right: 2rem ;
+  padding: 1rem;
+  font-weight: 600;
+  border-bottom: dotted;
+}
+.heading{
+  text-align: center;
+  font-size: 2.5rem;
+  color: #03609a;
+  margin-right: 25rem ;
+  padding: 1rem;
+  animation: heading 5s linear infinite;
+}
+@keyframes heading{
+  0% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(40%);
+  }
+}
+
+body {
+  height: 100vh;
+  background: rgb(232, 219, 219);
+  background-color: #cf2f2f;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+.weather-input{
+  width: 40%;
+  position: fixed;
+  inset: 0;
+  background: #d07f50;
+  padding: 1rem 3.5rem;
+}
+.weatherIcon{
+  background-color: 60% !important;
+  background-repeat: no-repeat !important;
+  background-size: 500px ;
+  display: block ;
+  height: 25%;
+  margin: 4rem auto;
+  width: 300px;
+  size: 50px;
+  border-radius: 50%;
+  
+}
+
+.input-group{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  font-size: 250px;
+}
+.input-group input {
+  background: #f8f8f8;
+  text-transform: capitalize;
+  padding: 1rem;
+  font-size: 15px;
+  border-radius: 6px;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.input-group .converter{
+  position: absolute;
+  right: 45px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.input-group .fa-search {
+  position: absolute;
+  right: 15px;
+  color: #080808;
+  cursor: pointer;
+  font-size: 25px
+}
+
+.weather-output {
+  width: 80%;
+  position: fixed;
+  inset: 0;
+  margin-left: 40%;
+  padding: 2rem;
+  background: #f6f6f6;
+  overflow: auto;
+  font-size: large;
+}
+
+.highlights{
+  display: grid;
+  grid-template-columns: repeat(3,350px);
+  grid-auto-flow: row;
+  row-gap: 2rem;
+  column-gap: 20px;
+ 
+}
+
+.highlights div{
+  height: 300px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #9bcb8f;
+  border-radius: 20px;
+  padding: 1 rem;
+  
+}
+.highlights i{
+  font-size: 45px;
+}
+
+.sun span{
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.converter {
+  border-radius: 25px;
+  font-weight: 100;
+  background-color: #f8f8f8;
+  padding: 0.3rem 0.2rem;
+}
